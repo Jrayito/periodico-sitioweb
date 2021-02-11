@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noti-Tab - El mejor diario de Tabasco</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <div class="nav-banner">
+        <div class="brand-logo">
+          <img src="../recursos/logo-periodico.png" alt="">
+        </div>
+        <ul>
+          <li><a href="../index.html">Cerrar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container buscador-all">
+    <input type="text" id="search" placeholder="Buscar... ">
+    <select name="" id="option-cat-buscador">
+      <option value="">Categoria</option>
+    </select>
+    <select name="" id="option-tipo-buscador">
+      <option value="1">Local</option>
+      <option value="2">Nacional</option>
+      <option value="3">Internacional</option>
+    </select>
+    <button id="btn_new">Nueva Nota</button>
+  </div>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 650px;">Titulo</th>
+          <th>Categoria</th>
+          <th>Tipo</th>
+          <th>Fecha</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="body-user">
+        
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal">
+    <div class="content-modal">
+      <button class="close-modal" title="Cerrar"><i class="material-icons">close</i></button>
+      <form action="" id="form-nota" enctype="multipart/form-data">
+        <input type="hidden" name="fecha" id="fecha">
+        <input type="hidden" name="hidden" id="hidden">
+        <input type="file" name="file" id="file">
+        <input type="text" name="title-nota" id="title-nota">
+        <select name="opcion-cat" id="option-cat">
+          <option value="">Categorias</option>
+        </select>
+        <select name="option-tipo" id="option-tipo">
+          <option value="1">Local</option>
+          <option value="2">Nacional</option>
+          <option value="3">Internacional</option>
+        </select>
+        <textarea name="txt-descripcion" id="desc" cols="30" rows="10"></textarea>
+        <button id="btn-guardar">Guardar</button>
+      </form>
+    </div>  
+  </div>
+
+  <script src="../scripts/empleado.js"></script>
+</body>
+
+</html>
